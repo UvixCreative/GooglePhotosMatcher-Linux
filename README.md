@@ -16,9 +16,9 @@ This algorithm is able to match this information in the image/video from the dow
 
 2. Clone this repository and run `python3 cli.py <path>`
 
-  - Optionally run with `--suffix` or `-s` to add a custom file suffix
+    - Optionally run with `--suffix` or `-s` to add a custom file suffix
 
-6. Matched images/videos will be on directory _-MatchedMedia_ inside the same path
+3. Matched images/videos will be on directory _-MatchedMedia_ inside the same path
 
 ## FAQs
 
