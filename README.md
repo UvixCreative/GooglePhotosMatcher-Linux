@@ -1,6 +1,6 @@
 # Google Photos Matcher (Linux fork) (v 1.2)
 
-Simple executable to match metadata from JSONs to original images/videos.
+Simple executable to match metadata from JSONs to original images/videos. This repository is a fork of [anderbggo's project](https://github.com/anderbggo/GooglePhotosMatcher) modified to run on Linux via CLI
 
 Same work than [MetadataFixer](https://metadatafixer.com/pricing) but its free!
 
@@ -56,4 +56,4 @@ Sometimes, the algorithm does not recognize the names of the images due to the p
 
 ## Donations💰
 
-See the [original project](https://github.com/mcgrawia/GooglePhotosMatcher) for donation links
+See the [original project](https://github.com/anderbggo/GooglePhotosMatcher) for donation links
