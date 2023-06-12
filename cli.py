@@ -1,4 +1,4 @@
-from main import *
+from files.main import mainProcess
 import argparse
 
 parser = argparse.ArgumentParser(

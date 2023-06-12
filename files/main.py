@@ -1,4 +1,4 @@
-from auxFunctions import *
+from .auxFunctions import *
 import json
 from PIL import Image
 
@@ -7,8 +7,8 @@ def mainProcess(browserPath, editedSuffix):
 
     mediaMoved = []  # array with names of all the media already matched
     path = browserPath  # source path
-    fixedMediaPath = path + "\MatchedMedia"  # destination path
-    nonEditedMediaPath = path + "\EditedRaw"
+    fixedMediaPath = path + "-MatchedMedia"  # destination path
+    nonEditedMediaPath = path + "-EditedRaw"
     errorCounter = 0
     successCounter = 0
     editedWord = editedSuffix or "editado"
