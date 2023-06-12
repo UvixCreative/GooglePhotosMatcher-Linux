@@ -1,14 +1,12 @@
-# Google Photos Matcher (v 1.2)
+# Google Photos Matcher (Linux fork) (v 1.2)
 
 Simple executable to match metadata from JSONs to original images/videos.
 
-Same work than [MetadataFixer](https://metadatafixer.com/pricing) but it's free!
-
-Get started with `python window.py`
+Same work than [MetadataFixer](https://metadatafixer.com/pricing) but its free!
 
 ## Wiki 📖
 
-When you download the images from Google Photos, they lose some metadata such as the date and the coordinates in which they were taken.
+When you download the images from google photos, they lose some metadata such as the date and the coordinates in which they were taken.
 
 This algorithm is able to match this information in the image/video from the downloaded JSONs
 
@@ -16,15 +14,11 @@ This algorithm is able to match this information in the image/video from the dow
 
 1. Download your _Google Photos_ media from [Takeout](https://takeout.google.com/)
 
-2. Run `python window.py`
+2. Clone this repository and run `python3 cli.py <path>`
 
-3. [Optional] Type custom suffix used for edited photos (explained in the program)
+  - Optionally run with `--suffix` or `-s` to add a custom file suffix
 
-4. Select the folder in which images/videos along with its JSONs were downloaded ('Photos from 2022' for example)
-
-5. Click on _Match_ button
-
-6. Matched images/videos will be on directory _Matched_ inside the same path
+6. Matched images/videos will be on directory _-MatchedMedia_ inside the same path
 
 ## FAQs
 
@@ -35,7 +29,7 @@ Images and videos edited from _Google Photos's_ editor will have 2 different ver
   1. Edited version
   2. Original version
   
-Edited version will be stored in _Matched_ while original in _EditedRaw_
+Edited version will be stored in _MatchedMedia_ while original in _EditedRaw_
 
 ### Why some images/videos stay unmatched?
 
@@ -58,4 +52,8 @@ Sometimes, the algorithm does not recognize the names of the images due to the p
 
 * **anderbggo** - Author
 * **Freepik** - Icon creator
-* **mcgrawia** - Updated to work with Mac
+* **UvixCreative** - Forked and modified to run on Linux
+
+## Donations💰
+
+See the [original project](https://github.com/mcgrawia/GooglePhotosMatcher) for donation links
