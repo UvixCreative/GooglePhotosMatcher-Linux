@@ -2,7 +2,6 @@ import os
 import time
 from datetime import datetime
 import piexif
-from win32_setctime import setctime
 from fractions import Fraction
 
 
