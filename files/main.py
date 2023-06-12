@@ -43,7 +43,7 @@ def mainProcess(browserPath, editedSuffix):
                 errorCounter += 1
                 continue
 
-            filepath = path + "\\" + title
+            filepath = path + "/" + title
             if title == "None":
                 print(titleOriginal + " not found")
                 errorCounter += 1
@@ -79,8 +79,8 @@ def mainProcess(browserPath, editedSuffix):
 
             #MOVE FILE AND DELETE JSON
 
-            os.replace(filepath, fixedMediaPath + "\\" + title)
-            os.remove(path + "\\" + entry.name)
+            os.replace(filepath, fixedMediaPath + "/" + title)
+            os.remove(path + "/" + entry.name)
             mediaMoved.append(title)
             successCounter += 1
 
@@ -95,5 +95,5 @@ def mainProcess(browserPath, editedSuffix):
         errorMessage = " error"
 
     print("100% complete!")
-    print("Matching process finishhed with " + str(successCounter) + sucessMessage + " and " + str(errorCounter) + errorMessage + ".")
+    print("Matching process finished with " + str(successCounter) + sucessMessage + " and " + str(errorCounter) + errorMessage + ".")
 

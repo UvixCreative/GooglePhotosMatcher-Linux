@@ -9,43 +9,43 @@ from fractions import Fraction
 def searchMedia(path, title, mediaMoved, nonEdited, editedWord):
     title = fixTitle(title)
     realTitle = str(title.rsplit('.', 1)[0] + "-" + editedWord + "." + title.rsplit('.', 1)[1])
-    filepath = path + "\\" + realTitle  # First we check if exists an edited version of the image
+    filepath = path + "/" + realTitle  # First we check if exists an edited version of the image
     if not os.path.exists(filepath):
         realTitle = str(title.rsplit('.', 1)[0] + "(1)." + title.rsplit('.', 1)[1])
-        filepath = path + "\\" + realTitle  # First we check if exists an edited version of the image
-        if not os.path.exists(filepath) or os.path.exists(path + "\\" + title + "(1).json"):
+        filepath = path + "/" + realTitle  # First we check if exists an edited version of the image
+        if not os.path.exists(filepath) or os.path.exists(path + "/" + title + "(1).json"):
             realTitle = title
-            filepath = path + "\\" + realTitle  # If not, check if exists the path with the same name
+            filepath = path + "/" + realTitle  # If not, check if exists the path with the same name
             if not os.path.exists(filepath):
                 realTitle = checkIfSameName(title, title, mediaMoved, 1)  # If not, check if exists the path to the same name adding (1), (2), etc
-                filepath = str(path + "\\" + realTitle)
+                filepath = str(path + "/" + realTitle)
                 if not os.path.exists(filepath):
                     title = (title.rsplit('.', 1)[0])[:47] + "." + title.rsplit('.', 1)[1]  # Sometimes title is limited to 47 characters, check also that
                     realTitle = str(title.rsplit('.', 1)[0] + "-editado." + title.rsplit('.', 1)[1])
-                    filepath = path + "\\" + realTitle
+                    filepath = path + "/" + realTitle
                     if not os.path.exists(filepath):
                         realTitle = str(title.rsplit('.', 1)[0] + "(1)." + title.rsplit('.', 1)[1])
-                        filepath = path + "\\" + realTitle
+                        filepath = path + "/" + realTitle
                         if not os.path.exists(filepath):
                             realTitle = title
-                            filepath = path + "\\" + realTitle
+                            filepath = path + "/" + realTitle
                             if not os.path.exists(filepath):
                                 realTitle = checkIfSameName(title, title, mediaMoved, 1)
-                                filepath = path + "\\" + realTitle
+                                filepath = path + "/" + realTitle
                                 if not os.path.exists(filepath):  # If path not found, return null
                                     realTitle = None
                         else:
-                            filepath = path + "\\" + title  # Move original media to another folder
-                            os.replace(filepath, nonEdited + "\\" + title)
+                            filepath = path + "/" + title  # Move original media to another folder
+                            os.replace(filepath, nonEdited + "/" + title)
                     else:
-                        filepath = path + "\\" + title  # Move original media to another folder
-                        os.replace(filepath, nonEdited + "\\" + title)
+                        filepath = path + "/" + title  # Move original media to another folder
+                        os.replace(filepath, nonEdited + "/" + title)
         else:
-            filepath = path + "\\" + title  # Move original media to another folder
-            os.replace(filepath, nonEdited + "\\" + title)
+            filepath = path + "/" + title  # Move original media to another folder
+            os.replace(filepath, nonEdited + "/" + title)
     else:
-        filepath = path + "\\" + title  # Move original media to another folder
-        os.replace(filepath, nonEdited + "\\" + title)
+        filepath = path + "/" + title  # Move original media to another folder
+        os.replace(filepath, nonEdited + "/" + title)
 
     return str(realTitle)
 
